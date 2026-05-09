@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Docker &amp; Containers — Cloud Tinkerers Roadmaps</title>
+  <meta name="description" content="A plain-English guide to containers — how to package apps so they run identically anywhere, and how Kubernetes takes that idea to a global scale.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>:root { --page-accent: #059669; }</style>
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-logo">
+        <span class="logo-symbol">✦</span>
+        <span>Cloud Tinkerers</span>
+        <span class="logo-badge">Roadmaps</span>
+      </a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#roadmaps">Roadmaps</a>
+        <a href="https://cloudtinkerers.com" target="_blank" rel="noopener" class="external-link">cloudtinkerers.com ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="rp-hero">
+    <div class="container">
+      <div class="rp-breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">→</span>
+        <a href="../index.html#roadmaps">Roadmaps</a>
+        <span class="sep">→</span>
+        <span>Docker &amp; Containers</span>
+      </div>
+      <span class="rp-badge">Stage 5 of 7 · Modern Packaging</span>
+      <h1>Learn <em>Docker</em> &amp; Containers</h1>
+      <p class="rp-subtitle">A plain-English guide to containers — how to package apps so they run identically anywhere, and how Kubernetes takes that idea to a global scale.</p>
+      <p class="rp-meta">Updated May 2025 · 5–6 Weeks · 7 Stages</p>
+    </div>
+  </section>
+
+  <!-- ============ PREV/NEXT NAV ============ -->
+  <section class="rp-prevnext">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <a href="cloud.html">← Previous</a>
+      <div class="rp-prevnext-dots">
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot active"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+      </div>
+      <a href="cicd.html">Next →</a>
+    </div>
+  </section>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="section">
+    <div class="container">
+      <div class="rp-layout">
+
+        <!-- LEFT COLUMN -->
+        <div class="rp-main">
+
+          <!-- Intro Card -->
+          <div class="rp-intro-card">
+            <p><strong>What is a container?</strong> Picture this: a developer builds an app on their laptop, it works perfectly — then they hand it to you to deploy on a server and it breaks completely. Different operating system, different library versions, different settings. This "works on my machine" problem has haunted software teams for decades. Containers solve it.</p>
+            <p style="margin-top:16px;">A container is a neat, self-contained package with the app and everything it needs to run — bundled together so it behaves identically on any machine, any server, any cloud. Docker is the tool that creates those packages. It is one of the most transformative technologies in modern DevOps, and once you understand it, you'll wonder how anyone deployed software without it.</p>
+          </div>
+
+          <!-- Section Heading -->
+          <h2 class="rp-section-heading">Your 7-Stage Docker Roadmap</h2>
+
+          <!-- Steps -->
+          <div class="rp-steps">
+            <article class="rp-step-card" id="step-1">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#e05c2a;">1</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Understand Containers vs Virtual Machines</h3>
+                <span class="rp-step-badge" style="background:#e05c2a;">Concept First</span>
+                <p class="rp-step-desc">Before installing anything, get the mental model right. A Virtual Machine (VM) simulates an entire computer — its own operating system, its own kernel, its own hardware. It's powerful but heavy. A container shares the host computer's operating system but keeps everything else isolated — making it lightweight, fast to start, and cheap to run. You can spin up 50 containers on a laptop that could only handle 3 VMs. Install Docker Desktop (free), run docker run hello-world, and watch the magic happen.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">Docker Desktop (free)</span>
+                  <span class="rp-tool-chip">Containers vs VMs</span>
+                  <span class="rp-tool-chip">docker run hello-world</span>
+                  <span class="rp-tool-chip">What is a container runtime?</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-2">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#d44d8a;">2</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Container Images — The Blueprint</h3>
+                <span class="rp-step-badge" style="background:#d44d8a;">Core Concept</span>
+                <p class="rp-step-desc">An image is the blueprint — a read-only snapshot of an app and all its dependencies. A container is a running instance of that image. One image can launch dozens of identical containers simultaneously. Images are stored and shared on Docker Hub — a public library with hundreds of thousands of ready-made images for databases, web servers, programming languages, and more. Pull an nginx image, run it, and open your browser to see a live web server running inside a container in seconds.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">docker pull</span>
+                  <span class="rp-tool-chip">docker images</span>
+                  <span class="rp-tool-chip">docker run / docker ps</span>
+                  <span class="rp-tool-chip">docker stop / docker rm</span>
+                  <span class="rp-tool-chip">Docker Hub (hub.docker.com)</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-3">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#7c3aed;">3</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Write Your First Dockerfile</h3>
+                <span class="rp-step-badge" style="background:#7c3aed;">Build Your Own</span>
+                <p class="rp-step-desc">A Dockerfile is a plain text recipe that tells Docker how to build your image — start from a base image, copy your code in, install dependencies, and define what command runs when the container starts. It's usually just 10–15 lines long. Write a Dockerfile for a simple Python or Node.js app, build it with docker build, and run it with docker run. When your app starts inside a container you built yourself, this stage's most important lesson lands: you now control the entire environment your app runs in.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">FROM (base image)</span>
+                  <span class="rp-tool-chip">COPY &amp; RUN instructions</span>
+                  <span class="rp-tool-chip">EXPOSE &amp; CMD</span>
+                  <span class="rp-tool-chip">docker build -t myapp .</span>
+                  <span class="rp-tool-chip">Image layers &amp; caching</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-4">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#2a7ae0;">4</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Docker Compose — Run Multiple Containers</h3>
+                <span class="rp-step-badge" style="background:#2a7ae0;">Real-World Apps</span>
+                <p class="rp-step-desc">Real applications are never just one thing. A typical web app has a frontend, a backend API, and a database — three separate services that need to run together and talk to each other. Docker Compose lets you define all of them in a single YAML file and start the whole stack with one command: docker compose up. This is how development environments are built at companies of every size. Write a Compose file that runs a web app alongside a PostgreSQL or MySQL database container.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">docker-compose.yml</span>
+                  <span class="rp-tool-chip">docker compose up / down</span>
+                  <span class="rp-tool-chip">Services, networks &amp; volumes</span>
+                  <span class="rp-tool-chip">Environment variables</span>
+                  <span class="rp-tool-chip">depends_on (service order)</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-5">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#059669;">5</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Volumes &amp; Networking — Data That Survives</h3>
+                <span class="rp-step-badge" style="background:#059669;">Don't Lose Data</span>
+                <p class="rp-step-desc">By default, when a container stops, all data inside it disappears. That's a problem for databases and file uploads. Volumes solve this by connecting a folder inside the container to a folder on your real machine — so data persists even when the container is gone. Similarly, containers need to talk to each other over a network. Docker creates its own internal networks and lets you define which containers can see each other. Both concepts are essential for running any stateful application in production.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">docker volume create</span>
+                  <span class="rp-tool-chip">Bind mounts vs named volumes</span>
+                  <span class="rp-tool-chip">Persisting database data</span>
+                  <span class="rp-tool-chip">docker network (bridge, host)</span>
+                  <span class="rp-tool-chip">Container-to-container comms</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-6">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#b45309;">6</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Push Images to a Registry</h3>
+                <span class="rp-step-badge" style="background:#b45309;">Share &amp; Deploy</span>
+                <p class="rp-step-desc">Once you've built an image, you need somewhere to store it so servers and pipelines can pull it down. That place is called a container registry. Docker Hub is the public one — free for public images. AWS has ECR (Elastic Container Registry), Azure has ACR, and Google Cloud has Artifact Registry — all private registries that plug directly into cloud deployments. Tag your image, push it to a registry, then pull it down on a cloud VM and run it. This is the exact flow your CI/CD pipeline will automate later.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">docker tag &amp; docker push</span>
+                  <span class="rp-tool-chip">Docker Hub (free)</span>
+                  <span class="rp-tool-chip">AWS ECR</span>
+                  <span class="rp-tool-chip">Azure Container Registry</span>
+                  <span class="rp-tool-chip">Image versioning &amp; tags</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-7">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#0891b2;">7</div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Kubernetes — The Next Frontier</h3>
+                <span class="rp-step-badge" style="background:#0891b2;">What Comes Next</span>
+                <p class="rp-step-desc">Docker runs containers on one machine. Kubernetes (often called "K8s") runs and manages containers across hundreds of machines — automatically restarting crashed containers, scaling up when traffic spikes, and rolling out updates with zero downtime. You don't need to master Kubernetes at this stage — just understand what problem it solves. Learn the core concepts: Pods (a running container), Deployments (manages replicas), and Services (exposes a pod to the network). Use Minikube to run a local Kubernetes cluster for free.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">Minikube (local K8s)</span>
+                  <span class="rp-tool-chip">kubectl (K8s CLI)</span>
+                  <span class="rp-tool-chip">Pods &amp; Deployments</span>
+                  <span class="rp-tool-chip">Services &amp; Ingress</span>
+                  <span class="rp-tool-chip">AWS EKS / Azure AKS (managed K8s)</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Timeline Bar -->
+          <div class="rp-timeline">
+            <h3>Realistic Timeline (1 Hour a Day)</h3>
+            <div class="rp-timeline-bar">
+              <div class="rp-timeline-segment" style="width:13%;background:#e05c2a;"></div>
+              <div class="rp-timeline-segment" style="width:14%;background:#d44d8a;"></div>
+              <div class="rp-timeline-segment" style="width:14%;background:#7c3aed;"></div>
+              <div class="rp-timeline-segment" style="width:15%;background:#2a7ae0;"></div>
+              <div class="rp-timeline-segment" style="width:14%;background:#059669;"></div>
+              <div class="rp-timeline-segment" style="width:14%;background:#b45309;"></div>
+              <div class="rp-timeline-segment" style="width:16%;background:#0891b2;"></div>
+            </div>
+            <div class="rp-timeline-labels">
+              <span class="rp-timeline-label" style="width:13%;">Day 1–4</span>
+              <span class="rp-timeline-label" style="width:14%;">Day 5–9</span>
+              <span class="rp-timeline-label" style="width:14%;">Day 10–14</span>
+              <span class="rp-timeline-label" style="width:15%;">Day 15–20</span>
+              <span class="rp-timeline-label" style="width:14%;">Day 21–25</span>
+              <span class="rp-timeline-label" style="width:14%;">Day 26–29</span>
+              <span class="rp-timeline-label" style="width:16%;">Day 30–40</span>
+            </div>
+          </div>
+
+          <!-- Tips -->
+          <h2 class="rp-tips-heading">4 Rules to Learn Docker Fast</h2>
+          <div class="rp-tips-grid">
+            <div class="rp-tip-card">
+              <span class="rp-tip-icon">📦</span>
+              <h4 class="rp-tip-title">Containerise Something You Already Built</h4>
+              <p class="rp-tip-text">Don't practice on fake tutorial apps. Go back to any Python script or web project from Stage 3 and write a Dockerfile for it. Familiar code makes new concepts easier to absorb.</p>
+            </div>
+            <div class="rp-tip-card">
+              <span class="rp-tip-icon">🧅</span>
+              <h4 class="rp-tip-title">Understand Layers &amp; Keep Images Small</h4>
+              <p class="rp-tip-text">Every line in a Dockerfile creates a new layer. Too many layers mean bloated images that take forever to pull. Learn to use multi-stage builds and .dockerignore from the start — good habits now save real pain later.</p>
+            </div>
+            <div class="rp-tip-card">
+              <span class="rp-tip-icon">🧹</span>
+              <h4 class="rp-tip-title">Clean Up Regularly</h4>
+              <p class="rp-tip-text">Old images, stopped containers, and unused volumes pile up fast and eat disk space. Run docker system prune regularly. It's the DevOps equivalent of emptying your bin.</p>
+            </div>
+            <div class="rp-tip-card">
+              <span class="rp-tip-icon">🚢</span>
+              <h4 class="rp-tip-title">Don't Skip Compose</h4>
+              <p class="rp-tip-text">Many beginners rush past Docker Compose to get to Kubernetes. Don't. Compose is how real development environments run at most companies. You'll use it daily — it deserves proper attention.</p>
+            </div>
+          </div>
+
+          <!-- Closing Quote -->
+          <div class="rp-closing">
+            <span class="rp-closing-mark">"</span>
+            <p class="rp-closing-text">Containers changed the industry. Before Docker, deploying an app meant hours of configuration, dependency conflicts, and crossed fingers. After Docker, it means one command. That shift is why every job description in DevOps today mentions containers — and why mastering this stage makes everything that follows dramatically easier.</p>
+            <p class="rp-closing-text" style="margin-top:12px;">Build a container today. Ship it tomorrow. That's modern DevOps.</p>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN — Sidebar -->
+        <aside class="rp-sidebar">
+          <div class="rp-sidebar-title">In This Roadmap</div>
+          <nav class="rp-sidebar-nav">
+            <a href="#step-1" class="rp-sidebar-item">1. Containers vs Virtual Machines</a>
+            <a href="#step-2" class="rp-sidebar-item">2. Container Images — The Blueprint</a>
+            <a href="#step-3" class="rp-sidebar-item">3. Write Your First Dockerfile</a>
+            <a href="#step-4" class="rp-sidebar-item">4. Docker Compose</a>
+            <a href="#step-5" class="rp-sidebar-item">5. Volumes &amp; Networking</a>
+            <a href="#step-6" class="rp-sidebar-item">6. Push Images to a Registry</a>
+            <a href="#step-7" class="rp-sidebar-item">7. Kubernetes — The Next Frontier</a>
+          </nav>
+          <a href="../index.html" class="rp-sidebar-back">← View All Roadmaps</a>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ CONTINUE BANNER ============ -->
+  <section class="rp-continue-banner" style="background:linear-gradient(135deg, #059669, #047857);">
+    <h2>Ready for the next stage?</h2>
+    <p>Continue to Set Up CI/CD Pipelines →</p>
+    <a href="cicd.html" class="rp-continue-btn">Continue to Stage 6: CI/CD →</a>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Cloud Tinkerers — Roadmaps</div>
+        <div class="footer-links">
+          <a href="../index.html">Home</a>
+          <a href="devops-overview.html">DevOps Roadmap</a>
+          <a href="https://cloudtinkerers.com" target="_blank" rel="noopener">cloudtinkerers.com</a>
+        </div>
+        <div class="footer-right">Made with <span class="logo-symbol">✦</span> for the community</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

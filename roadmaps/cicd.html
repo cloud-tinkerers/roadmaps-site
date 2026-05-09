@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set Up CI/CD Pipelines — Cloud Tinkerers Roadmaps</title>
+  <meta name="description" content="A plain-English guide to the beating heart of DevOps — automating the journey from a developer's code commit all the way to users' screens, with zero manual steps.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>:root { --page-accent: #b45309; }</style>
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-logo">
+        <span class="logo-symbol">✦</span>
+        <span>Cloud Tinkerers</span>
+        <span class="logo-badge">Roadmaps</span>
+      </a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#roadmaps">Roadmaps</a>
+        <a href="https://cloudtinkerers.com" target="_blank" rel="noopener" class="external-link">cloudtinkerers.com ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="rp-hero">
+    <div class="container">
+      <div class="rp-breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">→</span>
+        <a href="../index.html#roadmaps">Roadmaps</a>
+        <span class="sep">→</span>
+        <span>CI/CD Pipelines</span>
+      </div>
+      <span class="rp-badge">Stage 6 of 7 · The Core Skill</span>
+      <h1>Set Up <em>CI/CD Pipelines</em></h1>
+      <p class="rp-subtitle">A plain-English guide to the beating heart of DevOps — automating the journey from a developer's code commit all the way to users' screens, with zero manual steps.</p>
+      <p class="rp-meta">Updated May 2025 · 5–6 Weeks · 7 Stages</p>
+    </div>
+  </section>
+
+  <!-- ============ PREV/NEXT NAV ============ -->
+  <section class="rp-prevnext">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <a href="docker.html">← Previous</a>
+      <div class="rp-prevnext-dots">
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot active"></span>
+        <span class="rp-dot"></span>
+      </div>
+      <a href="iac-monitoring.html">Next →</a>
+    </div>
+  </section>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="section">
+    <div class="container">
+      <div class="rp-layout">
+
+        <!-- LEFT COLUMN -->
+        <div class="rp-main">
+
+          <!-- Intro Card -->
+          <div class="rp-intro-card">
+            <p><strong>What is CI/CD?</strong> Before automated pipelines existed, deploying software meant a team of engineers spending entire weekends manually copying files, running tests by hand, crossing their fingers, and praying nothing broke. Releases happened once a month — sometimes once a quarter. It was slow, stressful, and error-prone.</p>
+            <p style="margin-top:16px;">CI/CD changed all of that. Continuous Integration means every code change is automatically tested the moment it's pushed. Continuous Deployment means code that passes those tests is automatically shipped to users — no human intervention needed. Today, companies like Amazon deploy code thousands of times per day. That is the power of a well-built pipeline, and building those pipelines is the core job of a DevOps engineer.</p>
+          </div>
+
+          <!-- Section Heading -->
+          <h2 class="rp-section-heading">Your 7-Stage CI/CD Roadmap</h2>
+
+          <!-- Steps -->
+          <div class="rp-steps">
+            <article class="rp-step-card" id="step-1">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#e05c2a;">1</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Understand the Pipeline Concept</h3>
+                <span class="rp-step-badge" style="background:#e05c2a;">Mental Model</span>
+                <p class="rp-step-desc">A pipeline is a series of automated steps that code passes through on its way from a developer's laptop to production. Think of it like a factory assembly line — raw code goes in one end, and a tested, packaged, deployed application comes out the other. The typical stages are: build (compile or package the code), test (run automated checks), and deploy (ship it to a server). Every CI/CD tool — GitHub Actions, Jenkins, GitLab CI — is just a different way to define and run this same assembly line.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">Build → Test → Deploy flow</span>
+                  <span class="rp-tool-chip">What triggers a pipeline?</span>
+                  <span class="rp-tool-chip">Pipeline stages &amp; jobs</span>
+                  <span class="rp-tool-chip">Pass vs fail conditions</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-2">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#d44d8a;">2</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">GitHub Actions — Your First Pipeline</h3>
+                <span class="rp-step-badge" style="background:#d44d8a;">Start Here</span>
+                <p class="rp-step-desc">GitHub Actions is the best place to start because it lives directly inside GitHub — no separate tool to install or pay for. You write a YAML file inside your repository and GitHub runs it automatically every time you push code. Create your first workflow: on every push to main, install your project's dependencies and run a test. When you see that green checkmark appear next to your commit, you've built your first CI pipeline. It's one of the most satisfying moments in this entire roadmap.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">.github/workflows/*.yml</span>
+                  <span class="rp-tool-chip">on: push / pull_request triggers</span>
+                  <span class="rp-tool-chip">jobs &amp; steps</span>
+                  <span class="rp-tool-chip">runs-on: ubuntu-latest</span>
+                  <span class="rp-tool-chip">Marketplace actions (uses:)</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-3">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#7c3aed;">3</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Automated Testing — The Safety Net</h3>
+                <span class="rp-step-badge" style="background:#7c3aed;">Never Ship Broken Code</span>
+                <p class="rp-step-desc">A pipeline without tests is just automation that ships broken code faster. Automated tests are the safety net — code that checks your code. You don't need to write complex tests at this stage, but you do need to understand the types: unit tests check individual functions, integration tests check that components work together, and linting catches formatting and syntax errors before they cause problems. Hook these into your pipeline so any failure automatically blocks a deployment. This is the CI in CI/CD — integration is only trustworthy when tests back it up.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">pytest (Python testing)</span>
+                  <span class="rp-tool-chip">Jest (JavaScript testing)</span>
+                  <span class="rp-tool-chip">Linting (flake8, eslint)</span>
+                  <span class="rp-tool-chip">Unit vs integration tests</span>
+                  <span class="rp-tool-chip">Failing a pipeline on test failure</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-4">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#2a7ae0;">4</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Build &amp; Push Docker Images in a Pipeline</h3>
+                <span class="rp-step-badge" style="background:#2a7ae0;">Everything Connects</span>
+                <p class="rp-step-desc">This is where Stage 5 (Docker) and Stage 6 (CI/CD) collide — and it's a genuinely exciting moment. Extend your GitHub Actions workflow to automatically build a Docker image of your app and push it to a registry (Docker Hub or AWS ECR) every time code passes its tests. No human needs to run docker build or docker push ever again — the pipeline does it. This pattern — test, build image, push to registry — is the foundation of almost every modern deployment system in the world.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">docker/build-push-action</span>
+                  <span class="rp-tool-chip">Secrets (storing credentials safely)</span>
+                  <span class="rp-tool-chip">Tagging images with commit SHA</span>
+                  <span class="rp-tool-chip">Push to Docker Hub / ECR</span>
+                  <span class="rp-tool-chip">Multi-stage Docker builds in CI</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-5">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#059669;">5</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Continuous Deployment — Ship It Automatically</h3>
+                <span class="rp-step-badge" style="background:#059669;">Close the Loop</span>
+                <p class="rp-step-desc">You've built. You've tested. You've packaged. Now close the loop: automatically deploy the new container to your server whenever the pipeline succeeds. This is the CD in CI/CD. Add a final pipeline step that SSHes into your cloud VM and pulls the latest Docker image, or triggers a deployment on a platform like AWS ECS, Render, or Railway. When a developer pushes code and — with no other human action — users are running the new version minutes later, you've built a real continuous deployment pipeline. This is the goal.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">Deploy via SSH in pipeline</span>
+                  <span class="rp-tool-chip">AWS ECS / App Runner</span>
+                  <span class="rp-tool-chip">Render / Railway (beginner-friendly)</span>
+                  <span class="rp-tool-chip">Environment-based deployments</span>
+                  <span class="rp-tool-chip">Rollback on failure</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-6">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#b45309;">6</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Jenkins &amp; GitLab CI — Enterprise Tools</h3>
+                <span class="rp-step-badge" style="background:#b45309;">Industry Standard</span>
+                <p class="rp-step-desc">GitHub Actions is perfect for learning, but many companies — especially large enterprises — use Jenkins or GitLab CI. Jenkins is the most widely deployed CI/CD tool in the world: self-hosted, endlessly customisable, and found in nearly every large engineering organisation. GitLab CI is tightly integrated with GitLab repositories and popular in DevOps-heavy teams. You don't need to master both — just understand how they differ from GitHub Actions. Install Jenkins locally using Docker, create a simple Jenkinsfile, and run a pipeline. That's enough to speak confidently about it in any interview.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">Jenkins (via Docker)</span>
+                  <span class="rp-tool-chip">Jenkinsfile (declarative pipeline)</span>
+                  <span class="rp-tool-chip">GitLab CI (.gitlab-ci.yml)</span>
+                  <span class="rp-tool-chip">Agents &amp; runners</span>
+                  <span class="rp-tool-chip">Pipeline as Code concept</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-7">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#0891b2;">7</div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Advanced Patterns — Environments &amp; Approvals</h3>
+                <span class="rp-step-badge" style="background:#0891b2;">Production-Grade</span>
+                <p class="rp-step-desc">Real production pipelines are more than just build-test-deploy. They have multiple environments — code flows through dev, then staging (a copy of production for final testing), then production (what real users see). They have manual approval gates — a human must sign off before code reaches production. They have blue/green deployments — spinning up a new version alongside the old one and switching traffic only when ready. These patterns are what separate a beginner pipeline from a production-grade one. Learn them and you graduate from junior to mid-level DevOps engineer.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">Dev / Staging / Production environments</span>
+                  <span class="rp-tool-chip">Manual approval gates</span>
+                  <span class="rp-tool-chip">Blue/green deployments</span>
+                  <span class="rp-tool-chip">Canary releases</span>
+                  <span class="rp-tool-chip">Secrets management (Vault, AWS SSM)</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Timeline Bar -->
+          <div class="rp-timeline">
+            <h3>Realistic Timeline (1 Hour a Day)</h3>
+            <div class="rp-timeline-bar">
+              <div class="rp-timeline-segment" style="width:13%;background:#e05c2a;"></div>
+              <div class="rp-timeline-segment" style="width:15%;background:#d44d8a;"></div>
+              <div class="rp-timeline-segment" style="width:14%;background:#7c3aed;"></div>
+              <div class="rp-timeline-segment" style="width:14%;background:#2a7ae0;"></div>
+              <div class="rp-timeline-segment" style="width:14%;background:#059669;"></div>
+              <div class="rp-timeline-segment" style="width:15%;background:#b45309;"></div>
+              <div class="rp-timeline-segment" style="width:15%;background:#0891b2;"></div>
+            </div>
+            <div class="rp-timeline-labels">
+              <span class="rp-timeline-label" style="width:13%;">Day 1–3</span>
+              <span class="rp-timeline-label" style="width:15%;">Day 4–9</span>
+              <span class="rp-timeline-label" style="width:14%;">Day 10–15</span>
+              <span class="rp-timeline-label" style="width:14%;">Day 16–21</span>
+              <span class="rp-timeline-label" style="width:14%;">Day 22–27</span>
+              <span class="rp-timeline-label" style="width:15%;">Day 28–33</span>
+              <span class="rp-timeline-label" style="width:15%;">Day 34–40</span>
+            </div>
+          </div>
+
+          <!-- Tips -->
+          <h2 class="rp-tips-heading">4 Rules to Master CI/CD Fast</h2>
+          <div class="rp-tips-grid">
+            <div class="rp-tip-card">
+              <span class="rp-tip-icon">🟢</span>
+              <h4 class="rp-tip-title">Start With the Green Checkmark</h4>
+              <p class="rp-tip-text">Your first pipeline doesn't need to be impressive — it just needs to run. Even a workflow that only runs echo "Hello CI" teaches you the structure. Build complexity one step at a time from there.</p>
+            </div>
+            <div class="rp-tip-card">
+              <span class="rp-tip-icon">🔐</span>
+              <h4 class="rp-tip-title">Never Hardcode Secrets</h4>
+              <p class="rp-tip-text">API keys, passwords, and tokens must never be written directly into a workflow file. Use your platform's secrets store — GitHub Secrets, GitLab CI Variables, or Jenkins Credentials. This is non-negotiable in any professional environment.</p>
+            </div>
+            <div class="rp-tip-card">
+              <span class="rp-tip-icon">⚡</span>
+              <h4 class="rp-tip-title">Keep Pipelines Fast</h4>
+              <p class="rp-tip-text">A pipeline that takes 30 minutes to run is a pipeline developers will try to skip. Cache dependencies, run jobs in parallel where possible, and ruthlessly remove steps that don't add value. Speed is a feature.</p>
+            </div>
+            <div class="rp-tip-card">
+              <span class="rp-tip-icon">📋</span>
+              <h4 class="rp-tip-title">Build a Portfolio Pipeline</h4>
+              <p class="rp-tip-text">Take a personal project — even a simple one from earlier stages — and wire up a complete CI/CD pipeline for it. Push code, watch it test, build, and deploy automatically. Record a short demo of it. That demo is worth more than any certificate in an interview.</p>
+            </div>
+          </div>
+
+          <!-- Closing Quote -->
+          <div class="rp-closing">
+            <span class="rp-closing-mark">"</span>
+            <p class="rp-closing-text">Every skill you've learned so far — Linux, Git, scripting, cloud, Docker — has been building toward this moment. A CI/CD pipeline is where it all plugs together into one automated system. When you build one from scratch and watch it run end-to-end without you touching a thing, you'll understand exactly why DevOps engineers are so valued.</p>
+            <p class="rp-closing-text" style="margin-top:12px;">One pipeline, built properly, changes how you think about software forever.</p>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN — Sidebar -->
+        <aside class="rp-sidebar">
+          <div class="rp-sidebar-title">In This Roadmap</div>
+          <nav class="rp-sidebar-nav">
+            <a href="#step-1" class="rp-sidebar-item">1. Understand the Pipeline Concept</a>
+            <a href="#step-2" class="rp-sidebar-item">2. GitHub Actions — Your First Pipeline</a>
+            <a href="#step-3" class="rp-sidebar-item">3. Automated Testing</a>
+            <a href="#step-4" class="rp-sidebar-item">4. Build &amp; Push Docker Images</a>
+            <a href="#step-5" class="rp-sidebar-item">5. Continuous Deployment</a>
+            <a href="#step-6" class="rp-sidebar-item">6. Jenkins &amp; GitLab CI</a>
+            <a href="#step-7" class="rp-sidebar-item">7. Advanced Patterns</a>
+          </nav>
+          <a href="../index.html" class="rp-sidebar-back">← View All Roadmaps</a>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ CONTINUE BANNER ============ -->
+  <section class="rp-continue-banner" style="background:linear-gradient(135deg, #b45309, #92400e);">
+    <h2>Ready for the next stage?</h2>
+    <p>Continue to Infrastructure as Code &amp; Monitoring →</p>
+    <a href="iac-monitoring.html" class="rp-continue-btn">Continue to Stage 7: IaC &amp; Monitoring →</a>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Cloud Tinkerers — Roadmaps</div>
+        <div class="footer-links">
+          <a href="../index.html">Home</a>
+          <a href="devops-overview.html">DevOps Roadmap</a>
+          <a href="https://cloudtinkerers.com" target="_blank" rel="noopener">cloudtinkerers.com</a>
+        </div>
+        <div class="footer-right">Made with <span class="logo-symbol">✦</span> for the community</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

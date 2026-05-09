@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux &amp; The Command Line — Cloud Tinkerers Roadmaps</title>
+  <meta name="description" content="Your very first step into DevOps — a plain-English guide to getting comfortable with Linux, the terminal, and the tools every server in the world runs on.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>:root { --page-accent: #e05c2a; }</style>
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-logo">
+        <span class="logo-symbol">✦</span>
+        <span>Cloud Tinkerers</span>
+        <span class="logo-badge">Roadmaps</span>
+      </a>
+      <div class="navbar-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#roadmaps">Roadmaps</a>
+        <a href="https://cloudtinkerers.com" target="_blank" rel="noopener" class="external-link">cloudtinkerers.com ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="rp-hero">
+    <div class="container">
+      <div class="rp-breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">→</span>
+        <a href="../index.html#roadmaps">Roadmaps</a>
+        <span class="sep">→</span>
+        <span>Linux &amp; The Command Line</span>
+      </div>
+      <span class="rp-badge">Stage 1 of 7 · Foundation</span>
+      <h1><em>Linux</em> &amp; The Command Line</h1>
+      <p class="rp-subtitle">Your very first step into DevOps — a plain-English guide to getting comfortable with Linux, the terminal, and the tools every server in the world runs on.</p>
+      <p class="rp-meta">Updated May 2025 · 3–4 Weeks · 7 Stages</p>
+    </div>
+  </section>
+
+  <!-- ============ PREV/NEXT NAV ============ -->
+  <section class="rp-prevnext">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <a href="../index.html">← Back to All Roadmaps</a>
+      <div class="rp-prevnext-dots">
+        <span class="rp-dot"></span>
+        <span class="rp-dot active"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+        <span class="rp-dot"></span>
+      </div>
+      <a href="git.html">Next →</a>
+    </div>
+  </section>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="section">
+    <div class="container">
+      <div class="rp-layout">
+
+        <!-- LEFT COLUMN -->
+        <div class="rp-main">
+
+          <!-- Intro Card -->
+          <div class="rp-intro-card">
+            <p><strong>Why Linux?</strong> Over 96% of the world's servers run Linux. Every cloud platform, every Docker container, and every DevOps pipeline assumes you know it. The good news: you don't need to become a Linux expert overnight. You just need to reach a level where the terminal feels like a tool, not a mystery. That's exactly what this roadmap gives you.</p>
+            <p style="margin-top:16px;">Think of the command line as texting with your computer — instead of clicking buttons, you type short instructions and the computer listens. It's faster, more powerful, and once it clicks, you'll wonder how you ever lived without it.</p>
+          </div>
+
+          <!-- Section Heading -->
+          <h2 class="rp-section-heading">Your 7-Stage Linux Roadmap</h2>
+
+          <!-- Steps -->
+          <div class="rp-steps">
+            <article class="rp-step-card" id="step-1">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#e05c2a;">1</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Install Linux &amp; Open a Terminal</h3>
+                <span class="rp-step-badge" style="background:#e05c2a;">Day One</span>
+                <p class="rp-step-desc">Before you can learn Linux, you need to run it. The easiest way is to install Ubuntu — the most beginner-friendly Linux version — inside a free tool called VirtualBox. This lets you run Linux on your existing Windows or Mac computer without changing anything. Install it, open the terminal (the black box with a blinking cursor), and type your first command: ls. Congratulations — you're in.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">Ubuntu 24.04 LTS</span>
+                  <span class="rp-tool-chip">VirtualBox (free)</span>
+                  <span class="rp-tool-chip">WSL2 (Windows users)</span>
+                  <span class="rp-tool-chip">Terminal / Bash</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-2">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#d44d8a;">2</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Navigate the File System</h3>
+                <span class="rp-step-badge" style="background:#d44d8a;">Core Skill</span>
+                <p class="rp-step-desc">Linux organises everything into folders, just like Windows or Mac — but you move around using text commands instead of clicking. Learn to list what's in a folder, move into it, go back up, and figure out where you are. These four commands — ls, cd, pwd, and mkdir — are the foundation of everything else.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">ls, cd, pwd</span>
+                  <span class="rp-tool-chip">mkdir, rmdir</span>
+                  <span class="rp-tool-chip">Absolute vs relative paths</span>
+                  <span class="rp-tool-chip">Hidden files (.dotfiles)</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-3">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#7c3aed;">3</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Create, Edit &amp; Manage Files</h3>
+                <span class="rp-step-badge" style="background:#7c3aed;">Daily Use</span>
+                <p class="rp-step-desc">Learn to create files, view their contents, copy them, move them, and delete them — all from the terminal. Then learn to edit files using a text editor called nano (beginner-friendly) or eventually vim (powerful, but has a learning curve). Also learn about file permissions: in Linux, every file has rules about who can read, write, or run it — and you'll need to change those rules often.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">touch, cp, mv, rm</span>
+                  <span class="rp-tool-chip">cat, less, head, tail</span>
+                  <span class="rp-tool-chip">nano / vim</span>
+                  <span class="rp-tool-chip">chmod, chown</span>
+                  <span class="rp-tool-chip">File permissions (rwx)</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-4">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#2a7ae0;">4</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Users, Processes &amp; Installing Software</h3>
+                <span class="rp-step-badge" style="background:#2a7ae0;">System Control</span>
+                <p class="rp-step-desc">Linux is a multi-user system. Learn the difference between a regular user and a superuser (sudo — like "admin mode"). Learn how to install and remove software using apt (Ubuntu's package manager — think of it as an app store for the terminal). Also learn to see what programs are currently running, and how to stop one that's misbehaving.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">sudo</span>
+                  <span class="rp-tool-chip">apt install / remove</span>
+                  <span class="rp-tool-chip">ps, top, htop</span>
+                  <span class="rp-tool-chip">kill / killall</span>
+                  <span class="rp-tool-chip">User management</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-5">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#059669;">5</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Networking Basics &amp; SSH</h3>
+                <span class="rp-step-badge" style="background:#059669;">Connect Remotely</span>
+                <p class="rp-step-desc">In DevOps, you'll almost never physically sit in front of a server — you'll connect to it remotely over the internet using a tool called SSH. It's like a secure phone call between your laptop and a server anywhere in the world. Learn how to check your machine's IP address, ping another server to test connectivity, and use SSH to log into a remote machine. This is the gateway to working in the real cloud.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">SSH (ssh command)</span>
+                  <span class="rp-tool-chip">SSH keys (safer than passwords)</span>
+                  <span class="rp-tool-chip">ping, curl, wget</span>
+                  <span class="rp-tool-chip">ifconfig / ip addr</span>
+                  <span class="rp-tool-chip">SCP (copy files remotely)</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-6">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#b45309;">6</div>
+                <div class="rp-step-connector"></div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Write Your First Bash Scripts</h3>
+                <span class="rp-step-badge" style="background:#b45309;">Automate It</span>
+                <p class="rp-step-desc">A Bash script is just a text file full of terminal commands that run one after another — like a to-do list your computer follows automatically. Start simple: write a script that creates a backup of a folder, or one that checks if a website is online and tells you. Variables, if/else conditions, and loops are the building blocks. Once you can write basic scripts, you've crossed the line from "Linux user" to "Linux automator."</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">#!/bin/bash (shebang)</span>
+                  <span class="rp-tool-chip">Variables &amp; conditionals</span>
+                  <span class="rp-tool-chip">for / while loops</span>
+                  <span class="rp-tool-chip">Functions</span>
+                  <span class="rp-tool-chip">Cron jobs (scheduled tasks)</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rp-step-card" id="step-7">
+              <div class="rp-step-timeline">
+                <div class="rp-step-num" style="background:#0891b2;">7</div>
+              </div>
+              <div class="rp-step-content">
+                <h3 class="rp-step-title">Power Tools: Search, Pipes &amp; Grep</h3>
+                <span class="rp-step-badge" style="background:#0891b2;">Work Faster</span>
+                <p class="rp-step-desc">The final level of Linux fluency is knowing how to chain commands together and search through things quickly. The pipe character (|) lets you feed the output of one command into another — like an assembly line. grep searches through text like Ctrl+F on steroids. These tools turn you into someone who can navigate and debug any Linux system with confidence.</p>
+                <div class="rp-tool-chips">
+                  <span class="rp-tool-chip">grep / grep -r</span>
+                  <span class="rp-tool-chip">Pipes ( | )</span>
+                  <span class="rp-tool-chip">find &amp; locate</span>
+                  <span class="rp-tool-chip">awk &amp; sed (basics)</span>
+                  <span class="rp-tool-chip">Redirects (&gt; and &gt;&gt;)</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Timeline Bar -->
+          <div class="rp-timeline">
+            <h3>Realistic Timeline (1 Hour a Day)</h3>
+            <div class="rp-timeline-bar">
+              <div class="rp-timeline-segment" style="width:14%;background:#e05c2a;"></div>
+              <div class="rp-timeline-segment" style="width:14%;background:#d44d8a;"></div>
+              <div class="rp-timeline-segment" style="width:15%;background:#7c3aed;"></div>
+              <div class="rp-timeline-segment" style="width:14%;background:#2a7ae0;"></div>
+              <div class="rp-timeline-segment" style="width:14%;background:#059669;"></div>
+              <div class="rp-timeline-segment" style="width:15%;background:#b45309;"></div>
+              <div class="rp-timeline-segment" style="width:14%;background:#0891b2;"></div>
+            </div>
+            <div class="rp-timeline-labels">
+              <span class="rp-timeline-label" style="width:14%;">Day 1–3</span>
+              <span class="rp-timeline-label" style="width:14%;">Day 4–7</span>
+              <span class="rp-timeline-label" style="width:15%;">Day 8–12</span>
+              <span class="rp-timeline-label" style="width:14%;">Day 13–17</span>
+              <span class="rp-timeline-label" style="width:14%;">Day 18–21</span>
+              <span class="rp-timeline-label" style="width:15%;">Day 22–26</span>
+              <span class="rp-timeline-label" style="width:14%;">Day 27–30</span>
+            </div>
+          </div>
+
+          <!-- Tips -->
+          <h2 class="rp-tips-heading">4 Rules to Learn Linux Fast</h2>
+          <div class="rp-tips-grid">
+            <div class="rp-tip-card">
+              <span class="rp-tip-icon">⌨️</span>
+              <h4 class="rp-tip-title">Type Every Command</h4>
+              <p class="rp-tip-text">Don't copy-paste commands when learning. Type them out manually, even if it's slower. Your fingers need to learn this too — muscle memory is real.</p>
+            </div>
+            <div class="rp-tip-card">
+              <span class="rp-tip-icon">💥</span>
+              <h4 class="rp-tip-title">Break Things on Purpose</h4>
+              <p class="rp-tip-text">Use your virtual machine as a sandbox. Delete things, mess up permissions, crash it. That's how you learn to fix things — and a VM means nothing real is at risk.</p>
+            </div>
+            <div class="rp-tip-card">
+              <span class="rp-tip-icon">📖</span>
+              <h4 class="rp-tip-title">Use the Manual</h4>
+              <p class="rp-tip-text">Every Linux command has built-in help. Type man ls or ls --help to see exactly what it does. The answer is usually already on your machine.</p>
+            </div>
+            <div class="rp-tip-card">
+              <span class="rp-tip-icon">🎯</span>
+              <h4 class="rp-tip-title">Build a Mini Project</h4>
+              <p class="rp-tip-text">Write a script that automates something you actually do — rename files, check disk space, or send yourself an alert. A real problem makes learning stick faster than any tutorial.</p>
+            </div>
+          </div>
+
+          <!-- Closing Quote -->
+          <div class="rp-closing">
+            <span class="rp-closing-mark">"</span>
+            <p class="rp-closing-text">The terminal looks scary the first time. It looked scary to every DevOps engineer who came before you, too. The secret is simple: use it every single day, even for small things. Open a terminal instead of a file manager. Use SSH instead of clicking into a server. Within a month, it becomes your fastest tool.</p>
+            <p class="rp-closing-text" style="margin-top:12px;">Master Linux, and the rest of DevOps becomes 10x easier.</p>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN — Sidebar -->
+        <aside class="rp-sidebar">
+          <div class="rp-sidebar-title">In This Roadmap</div>
+          <nav class="rp-sidebar-nav">
+            <a href="#step-1" class="rp-sidebar-item">1. Install Linux &amp; Open a Terminal</a>
+            <a href="#step-2" class="rp-sidebar-item">2. Navigate the File System</a>
+            <a href="#step-3" class="rp-sidebar-item">3. Create, Edit &amp; Manage Files</a>
+            <a href="#step-4" class="rp-sidebar-item">4. Users, Processes &amp; Installing Software</a>
+            <a href="#step-5" class="rp-sidebar-item">5. Networking Basics &amp; SSH</a>
+            <a href="#step-6" class="rp-sidebar-item">6. Write Your First Bash Scripts</a>
+            <a href="#step-7" class="rp-sidebar-item">7. Power Tools: Search, Pipes &amp; Grep</a>
+          </nav>
+          <a href="../index.html" class="rp-sidebar-back">← View All Roadmaps</a>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ CONTINUE BANNER ============ -->
+  <section class="rp-continue-banner" style="background:linear-gradient(135deg, #e05c2a, #c44d22);">
+    <h2>Ready for the next stage?</h2>
+    <p>Continue to Git &amp; Version Control →</p>
+    <a href="git.html" class="rp-continue-btn">Continue to Stage 2: Git →</a>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Cloud Tinkerers — Roadmaps</div>
+        <div class="footer-links">
+          <a href="../index.html">Home</a>
+          <a href="devops-overview.html">DevOps Roadmap</a>
+          <a href="https://cloudtinkerers.com" target="_blank" rel="noopener">cloudtinkerers.com</a>
+        </div>
+        <div class="footer-right">Made with <span class="logo-symbol">✦</span> for the community</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
