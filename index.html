@@ -9,6 +9,20 @@
   <meta property="og:description" content="Structured, plain-English roadmaps for DevOps, Cloud, and modern engineering careers. No fluff. Just direction.">
   <meta property="og:url" content="https://roadmaps.cloudtinkerers.com">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Override: 2-column grid on desktop instead of 4 */
+    .cards-grid-8 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    /* Card adjustments for wider 2-col layout */
+    .cards-grid-8 .roadmap-card {
+      max-width: none;
+      padding: 30px 28px;
+    }
+    .cards-grid-8 .roadmap-card .card-desc {
+      max-width: 480px;
+    }
+  </style>
 </head>
 <body>
 
