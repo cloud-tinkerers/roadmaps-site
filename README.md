@@ -1,9 +1,10 @@
 # roadmaps.cloudtinkerers.com
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?logo=vercel)](https://roadmaps.cloudtinkerers.com)  
-[https://roadmaps.cloudtinkerers.com](https://roadmaps.cloudtinkerers.com)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?logo=vercel)](https://roadmaps-site-original.vercel.app/index.html)  
 
-A free, open, and community-focused roadmap hub for DevOps, Cloud, and modern engineering careers. Every roadmap is written in plain English for complete beginners — no jargon, no assumed knowledge, just clear direction. A subsidiary of [cloudtinkerers.com](https://cloudtinkerers.com).
+[roadmaps-site-original.vercel.app](https://roadmaps-site-original.vercel.app/index.html)
+
+A free, open, and community-focused roadmap hub for DevOps, Cloud, and modern engineering careers. Every roadmap is written in plain English for complete beginners — no jargon, no assumed knowledge, just clear direction. 
 
 ## Project Overview
 
